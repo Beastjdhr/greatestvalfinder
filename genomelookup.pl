@@ -1,0 +1,19 @@
+use strict;
+print "Please enter your set of numbers separated by commas: ";
+my $input= <STDIN>;
+my $result= existing_element($input);
+print "$result" , "\n";
+sub existing_element {
+my $input=shift;
+my @set= split(',' , $input);
+use List::Util qw( max );
+my $greatest_val=max @set;
+my $sec= " ";
+my $i=1;
+for ($i=1; $i<= $greatest_val; $i++)
+{if ($i~~@set) {
+$sec=$sec."1";}
+else {
+$sec=$sec."0";}
+};
+return $sec;}
