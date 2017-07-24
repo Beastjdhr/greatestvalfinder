@@ -29,6 +29,7 @@ sub existing_element {
          my $greatestvalue=val_lookup($input);
          my $sec= " ";
          my $i=1;
+	 my @set= split(',' , $input);
          
          for ($i=1; $i<= $greatestvalue; $i++)
          {if ($i~~@set) {
