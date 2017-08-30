@@ -46,4 +46,7 @@ Create a text file with the following code:
         
 
 If your tree is rectangular, change "circular" to "rectangular" in the line below "800,800".
+   
+   Now that you have your XML working, you can start adding interactive features to your tree by modifying its XML script.
+   
 
