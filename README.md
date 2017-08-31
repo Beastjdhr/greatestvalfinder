@@ -10,11 +10,11 @@ https://phyd3.bits.vib.be/view.php?id=71d752e8b21452c2dcd8267f94a58bb7.xml&f=xml
 ### Download the necessary libraries
    The following libraries will be used to make your tree look better:
       
-      [Raphael (js library)] (https://raw.githubusercontent.com/DmitryBaranovskiy/raphael/master/raphael.min.js)
+Raphael (js library) (https://raw.githubusercontent.com/DmitryBaranovskiy/raphael/master/raphael.min.js)
       
-      [jsPhyloSVG] (https://github.com/guyleonard/jsPhyloSVG/blob/master/jsphylosvg-min.js)
+jsPhyloSVG (https://github.com/guyleonard/jsPhyloSVG/blob/master/jsphylosvg-min.js)
       
-      [jQuery 1.4.2] (http://code.jquery.com/jquery-1.4.2.min.js)
+jQuery 1.4.2 (http://code.jquery.com/jquery-1.4.2.min.js)
          
 Create a text file with the following code:
 
@@ -52,4 +52,10 @@ If your tree is rectangular, change "circular" to "rectangular" in the line belo
    
    Now that you have your XML working, you can start adding interactive features to your tree by modifying its XML script.
    
+If you want to have some XML tags generated for your XML tree, you can use the program I created, **tag_generator.pl**, which can be found in my repo. The only thing you need besides the program is your organism data written in a format like the one in **corecyanos**, another file you can find in my repo. 
 
+Once you have your data written in the same structure as that of **corecyanos**, go to your terminal and type:
+
+         perl tag_generator.pl name_of_input_file name_of_output_file
+         
+And there you have it! A set of tags ready to be used in your XML phylogenetic tree. To lear more about jsPhylosSVG's capability, click on the following link: http://www.jsphylosvg.com/documentation.php
