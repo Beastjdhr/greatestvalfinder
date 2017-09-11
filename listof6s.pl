@@ -4,29 +4,24 @@ use warnings;
 use strict;
 
 
-open TREE,"tree.svg.new" or die "$!\n";
+open TREE,"4.tree" or die "$!\n";
 my @input=<TREE>;
 close TREE;
 
-
+my @context;
 
 foreach my $line (@input) {
 	chomp $line;
-	if ($line=~/title/) {
-		if ($line=~/BGC/)
-			{
-			my @set= split/[>\s]/, $line;		
-			open OUT, ">>list.txt" or die "$!";
-			print OUT "$set[1] \n";
+	if ($line=~/^gi/) {
+		my @compnts= split/\|/, $line;
+		my $genome= $compnts[1];
+		push @context, $genome;
 		}
-		elsif ($line=~/\./) {
-		my @list= split/[>|]/, $line;
-		open OUT, ">>list.txt" or die "$!";
-		print OUT "$list[1]\n";
+		elsif ($line=~/BGC/) {
+		my @list= split/:/, $line;
+		my $bgc=$list[0];
+		push @context, $bgc;
 			}
-		close OUT;
-
-		
-		
 	}
-}
+my $contexts= join(",", @context);
+print $contexts;
