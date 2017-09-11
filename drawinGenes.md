@@ -1,8 +1,8 @@
 # Retrieveing gene coordinates and drawing genes using Perl
 
-In this file, I will explain how to draw the genes of any genome stored in MyRast or MIBig. You will need to download six scripts, all of which are in this repo: **getThatDrawing.pl**, **listof6s.pl**, **Rast_Final.pl**, **BGC_final.pl**, **fileCreator.pl**, and **3_Draw.pl** (the last one was created by @nselem).
-
-First, you need to run **listof6s.pl**. This script takes an svg tree as the input. This program was created as a way to gather data from the organisms in your phylogenetic tree; in this case, a tree in svg format, like the one in this repo, **3.tree**. 
+In this file, I will explain how to draw the genes of any genome stored in MyRast or MIBig. You will need to download six scripts, all of which are in this repo: **listof6s.pl**, **BGC_final.pl**, **Rast_Final.pl**, **fileCreator.pl**, **3_Draw.pl** (written by @nselem), and **getThatdrawing.pl**.
+mm nnn99n
+First, you need to run **listof6s.pl**. This script takes an svg tree as the input. This program was created as a way to gather data from the organisms in your phylogenetic tree; in this case, a tree in svg format, like the one in this repo, **3.tree**, which has to be an EvoMining tree. 
 Once you have your data sotred in this way, run the program and your results will be stored in a file called *newgenomes.txt*, where you will be able to see  the retrieved data of your organisms.
 
 ## MIBig or Rast?
@@ -38,5 +38,9 @@ This program is the ones that will actually draw your genes when all the neessar
 If you have both Rast and MIBig genes you want to be drawn, you don't have to change none of the first to variables. However, if you only have MIBig files, comment the $rastFiles variable, and comment the $BGCFiles variable if you only have Rast files.
 
 When calling 3_Draw.pl, don't change anything except the last value (which is salida by default), which is the directory where all your .input files are stored and where the program will create your gene drawings.
+
+Run the program like so:
+
+     perl getThatDrawing.pl
 
 I hope this was helpful. Feel free to hit me up with questions or comments. Happy coding, everyone!
